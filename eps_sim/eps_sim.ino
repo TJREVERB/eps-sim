@@ -67,7 +67,7 @@ int in0 = 0;
 int in1 = 0;
 int in2 = 0;
 int in3 = 0;
-int in4 = 0;
+int in4 = 1;
 int in5 = 0;
 int in6 = 0;
 int in7 = 0;
@@ -89,6 +89,10 @@ int soft_reset_freq=0;
 
 void setup() {
   Serial.begin(9600);
+
+  Serial.println("EPS powered");
+  
+  
   pinMode(SW0, OUTPUT);
   pinMode(SW1, OUTPUT);
   pinMode(SW2, OUTPUT);
@@ -116,6 +120,13 @@ void setup() {
   digitalWrite(SW8, in8);
   digitalWrite(SW9, in9);
 
+  for(int i=2; i=11; i++){
+    Serial.print("State of SW");
+    Serial.print(i-2);
+    Serial.print(": ");
+    Serial.print(digitalRead(i));
+    Serial.println();
+  }
 
   Wire.begin(43);
   Wire.onReceive(receiveEvent);
