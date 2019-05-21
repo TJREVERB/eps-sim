@@ -202,6 +202,7 @@ void receiveEvent(int howMany) {
       reset_node();
       break;
   }
+  delay(1);
 }
 
 void requestEvent() {
