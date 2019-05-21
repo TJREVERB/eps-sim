@@ -26,7 +26,7 @@
 //-------------- PDM Pins ----------------//
 
 
-int SW0=2;
+int SW0=2;//
 int SW1=3;
 int SW2=4;
 int SW3=5;
@@ -58,7 +58,7 @@ int bor=0;
 
 //---------- analog read pins ------------//
 
-int pinRead = 0;
+int pinRead = A0;
 
 
 //------------ PDM Initial States -------//
@@ -103,7 +103,8 @@ void setup() {
   pinMode(SW7, OUTPUT);
   pinMode(SW8, OUTPUT);
   pinMode(SW9, OUTPUT);
-
+  pinMode(pinRead, INPUT);
+  
   pinMode(BV, OUTPUT);
   pinMode(V12, OUTPUT);
   pinMode(V5, OUTPUT);
