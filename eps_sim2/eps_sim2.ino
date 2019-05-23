@@ -105,6 +105,16 @@ void setup() {
   Wire.onRequest(requestEvent);
   
 }
+void digitalReadWrapper(int pin)
+{
+  return;
+}
+
+void digitalWriteWrapper(int pin)
+{
+  return;
+}
+
 void writeValue(int pin,int high_low) {
   if(high_low>0) digitalWrite(pin,LOW);
   else digitalWrite(pin,HIGH);
@@ -319,61 +329,41 @@ void get_number_resets(int data){
 }
 int switchValue(int prev) {
   if(prev>0) {
-    return 1;
+    return LOW;
   }
-  else return 0;
+  else return HIGH;
 }
 void get_PDM_status(int data){
   switch(data) {
     case 1:
-      pinMode(SW0, INPUT);
       Wire.write(switchValue(digitalRead(SW0)));
-      pinMode(SW0, OUTPUT);
       break;
     case 2:
-      pinMode(SW1, INPUT);
       Wire.write(switchValue(digitalRead(SW1)));
-      pinMode(SW1, OUTPUT);
       break;
     case 3:
-      pinMode(SW2, INPUT);
       Wire.write(switchValue(digitalRead(SW2)));
-      pinMode(SW2, OUTPUT);
       break;
     case 4:
-      pinMode(SW3, INPUT);
       Wire.write(switchValue(digitalRead(SW3)));
-      pinMode(SW3, OUTPUT);
       break;
     case 5:
-      pinMode(SW4, INPUT);
       Wire.write(switchValue(digitalRead(SW4)));
-      pinMode(SW4, OUTPUT);
       break;
     case 6:
-      pinMode(SW5, INPUT);
       Wire.write(switchValue(digitalRead(SW5)));
-      pinMode(SW5, OUTPUT);
       break;
     case 7:
-      pinMode(SW6, INPUT);
       Wire.write(switchValue(digitalRead(SW6)));
-      pinMode(SW6, OUTPUT);
       break;
     case 8:
-      pinMode(SW7, INPUT);
       Wire.write(switchValue(digitalRead(SW7)));
-      pinMode(SW7, OUTPUT);
       break;
     case 9:
-      pinMode(SW8, INPUT);
       Wire.write(switchValue(digitalRead(SW8)));
-      pinMode(SW8, OUTPUT);
       break;
     case 10:
-      pinMode(SW9, INPUT);
       Wire.write(switchValue(digitalRead(SW9)));
-      pinMode(SW9, OUTPUT);
       break;
   }
 }
