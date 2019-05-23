@@ -319,9 +319,9 @@ void get_number_resets(int data){
 }
 int switchValue(int prev) {
   if(prev>0) {
-    return LOW;
+    return 1;
   }
-  else return HIGH;
+  else return 0;
 }
 void get_PDM_status(int data){
   switch(data) {
