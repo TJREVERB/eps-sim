@@ -1,3 +1,6 @@
+// If permission denied error in /dev/ttyACM0, run in command line:
+// sudo chmod a+rw /dev/ttyACM0
+
 #include <Wire.h>
 //----define command set for easy use-----//
 #define GET_BOARD_STATUS 0x01
@@ -58,6 +61,7 @@ int in7 = 0;
 int in8 = 0;
 int in9 = 0;
 //---------------------------------------//
+int pin_statuses[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 int watchdog = 4;
 int x=0;
 int written=0;
