@@ -61,7 +61,7 @@ int in7 = 0;
 int in8 = 0;
 int in9 = 0;
 //---------------------------------------//
-int pin_statuses[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int pin_statuses[10] = {0, 1, 0, 1, 1, 0, 1, 0, 0, 0};
 int watchdog = 4;
 int x=0;
 int written=0;
