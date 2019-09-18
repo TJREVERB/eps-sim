@@ -61,7 +61,7 @@ int in7 = 0;
 int in8 = 0;
 int in9 = 0;
 //---------------------------------------//
-int pin_statuses[10] = {0, 1, 0, 1, 1, 0, 1, 0, 0, 0};
+int pin_statuses[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 int watchdog = 4;
 int x=0;
 int written=0;
@@ -71,7 +71,7 @@ void setup() {
   Serial.begin(9600); 
   Serial.println("EPS powered"); 
   
-  int pin_statuses[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  int pin_statuses[10] = {in0, in1, in2, in3, in4, in5, in6, in7, in8, in9};
   pinMode(SW0, OUTPUT);
   pinMode(SW1, OUTPUT);
   pinMode(SW2, OUTPUT);
